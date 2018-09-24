@@ -1,0 +1,20 @@
+package Exercises;
+
+public class dateTypeexercise {
+
+	public static void main(String[] args) {
+
+		int averageAge = 19;
+		int numberOfSeats = 38;
+		int numberOfStudents = 25;
+		int numberOfDesks = 1000;
+
+		System.out.println(averageAge + numberOfSeats);
+
+		System.out.print(numberOfStudents / numberOfDesks);
+
+		System.out.println(numberOfSeats - numberOfDesks * averageAge);
+
+	}
+
+}

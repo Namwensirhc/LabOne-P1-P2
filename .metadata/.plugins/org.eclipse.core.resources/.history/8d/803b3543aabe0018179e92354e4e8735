@@ -1,0 +1,142 @@
+
+package labOneP1;
+
+import java.util.Scanner;
+
+public class labOneP1 {
+	/*
+	 * Input: Your program should read two integer numbers from the user with the
+	 * same number of digits (example: number1= 234, number2 = 564). * USE nextInt()
+	 * etc.* Task: Check if each corresponding place in the two numbers (ones, tens,
+	 * hundreds, …) sums to the same total. Output: Your program should print out:
+	 * True or False based on the result. * If, Else, Switch? * Examples: Number1 =
+	 * 153 , Number2 = 345 => 1+3 ≠ 5+4 ≠ 3+5Program prints False. Number1 = 543 ,
+	 * Number2 = 456 => 5+4 = 4+5 = 3+6 Program prints True. Things to look for: -
+	 * Do proper validation on the user’s input. - Write the task in a separate
+	 * method. - Provide adequate comments. - Provide adequate user prompts.
+	 */
+	static Scanner scan = new Scanner(System.in);
+
+	static int num1;
+	static int num2;
+	static String errorMessage2 = "Your number does not contain the same amount of digits as your first, Please try again: ";
+	static String errorMessage1 = "That's not a positive number you feeble ingrate. Try again."; // made this to
+	static int length1 = String.valueOf(num1).length(); // not acceptable input
+	static int length2 = String.valueOf(num2).length(); // simplify
+
+	public static void main(String[] args) {
+		p1();
+	}
+
+	// the error message for
+	public static void p1() {
+		{
+			System.out.print("Please enter a positve number human: ");
+		}
+		num1 = scan.nextInt();
+		// TRY USING OR Operators
+		// Google Type Casting to switch Boolean and Int
+		/*
+		 * while (!scan.hasNextInt() || (num1 = scan.nextInt()) <= 0) {
+		 * System.out.println(errorMessage1 + "\n"); } // Try Catch Blocks to stop from
+		 * crashing
+		 */
+		if (num1 > 0) {
+			System.out.println("Thank You primitive life form for entering " + num1
+					+ "! It appears I will not have to eliminate your biological life form from the gene pool. ");
+			System.out.println("One more request though, ");
+			System.out.println("please enter another positive number with the same amount of digits as " + num1 + ":");
+			num2 = scan.nextInt();
+			final int length1 = String.valueOf(num1).length(); // not acceptable input
+			final int length2 = String.valueOf(num2).length();
+			if ((length1 == length2) & (num1 > 0) & (num2 > 0)) {
+				System.out.println("Thank you lowly life form, you chose numbers: " + num1 + "," + num2);
+				System.out.println("Please give me a moment to calculate a few things...");
+				truefalse();
+			} else {
+				System.out.println("Too many invalid inputs.  .  . Program resetting   ");
+				p1();
+			}
+		} else if (num1 < 0) {
+			System.out.println(errorMessage1 + "\n");
+			p1();
+		} else {
+			System.out.println(errorMessage1);
+			p1();
+		}
+
+	}
+
+	public static void truefalse() {
+		int place10;
+		int place9;
+		int place8;
+		int place7;
+		int place6;
+		int place5;
+		int place4;
+		int place3;
+		int place2;
+		int place1;
+		
+		switch(length1) {
+        case 10:
+            place10 = num1 % 1000000000;
+            place10 = firstNum - place10;
+            tenDigit = place10 / 1000000000;
+        case 9:
+            place9 = firstNum - place10;
+            place9b = place9 % 100000000;
+            place9 = place9 - place9b;
+            ninDigit = (place9 / 100000000);
+        case 8:
+            place8 = (firstNum - place10) - place9;
+            place8b = place8 % 10000000;
+            place8 = place8 - place8b;
+            eigDigit = (place8 / 10000000);
+        case 7:
+            place7 = ((firstNum - place10) - place9) - place8;
+            place7b = place7 % 1000000;
+            place7 = place7 - place7b;
+            sevDigit = (place7 / 1000000);
+        case 6:
+            place6 = (((firstNum - place10) - place9) - place8) - place7;
+            place6b = place6 % 100000;
+            place6 = place6 - place6b;
+            sixDigit = (place6 / 100000);
+        case 5:
+            place5 = ((((firstNum - place10) - place9) - place8) - place7) - place6;
+            place5b = place5 % 10000;
+            place5 = place5 - place5b;
+            fivDigit = (place5 / 10000);
+        case 4:
+            place4 = (((((firstNum - place10) - place9) - place8) - place7) - place6) - place5;
+            place4b = place4 % 1000;
+            place4 = place4 - place4b;
+            fouDigit = (place4 / 1000);
+        case 3:
+            place3 = ((((((firstNum - place10) - place9) - place8) - place7) - place6) - place5) - place4;
+            place3b = place3 % 100;
+            place3 = place3 - place3b;
+            thiDigit = (place3 / 100);
+        case 2:
+            place2 = (((((((firstNum - place10) - place9) - place8) - place7) - place6) - place5) - place4) - place3;
+            place2b = place2 % 10;
+            place2 = place2 - place2b;
+            secDigit = (place2 / 10);
+        case 1:
+            place1 = ((((((((firstNum - place10) - place9) - place8) - place7) - place6) - place5) - place4) - place3) - place2;
+            place1b = place1 % 1;
+            place1 = place1 - place1b;
+            firDigit = (place1 / 1);
+            break;
+        default:
+            break;
+        }
+Message Input
+
+Message @Ed Carter
+		
+
+	}
+}

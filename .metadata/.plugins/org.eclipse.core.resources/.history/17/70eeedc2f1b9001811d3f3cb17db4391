@@ -1,0 +1,23 @@
+package Exercises;
+
+import java.util.Scanner;
+
+public class studentScore {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("Please enter your test score: ");
+		int testScore = scan.nextInt();
+		System.out.println("Your grade is " + testScore);
+
+		if (testScore >= 90) {
+			System.out.println("Grade = 'A'");
+
+		} else if (testScore <= 89 && testScore >= 80) {
+			System.out.println(testScore + "= 'B'");
+		}
+	}
+
+}

@@ -1,0 +1,29 @@
+package Exercises;
+
+import java.util.Scanner;
+
+public class studentScore {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("Please enter your test score: ");
+		int testScore = scan.nextInt();
+		System.out.println("Your grade is " + testScore);
+
+		if (testScore >= 90) {
+			System.out.println(testScore + " = A");
+
+		} else if (testScore <= 89 && testScore >= 80) {
+			System.out.println(testScore + " = B");
+		} else if (testScore <= 79 && testScore >= 70) {
+			System.out.println(testScore + " = C");
+		} else if (testScore <= 69 && testScore >= 60) {
+			System.out.println(testScore + " = D");
+		} else if (testScore < 60) {
+			System.out.println(testScore + " = F, You fail Dummy!");
+		}
+		scan.close();
+	}
+}

@@ -1,0 +1,22 @@
+package labOneP2;
+
+import java.util.Scanner;
+
+public class labOneP2 {
+	/*
+	 * Task: Write a Java console application to calculate the duration between two
+	 * dates in Years, Months and Days. The user should enter two dates as input,
+	 * then the program will show the result of the difference in time between these
+	 * two dates.
+	 */
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scan = new Scanner(System.in);
+		int Month;
+		int Day;
+		int Year;
+
+	}
+
+}

@@ -1,0 +1,15 @@
+package Exercises;
+
+public class aboutMe {
+
+	public static void main(String[] args) {
+		int birthYear = 1994;
+		var job = "Works as an Artist";
+		var birthMonth = "May";
+		
+		System.out.println("I was born in ") + birthYear + (".");
+		
+
+	}
+
+}

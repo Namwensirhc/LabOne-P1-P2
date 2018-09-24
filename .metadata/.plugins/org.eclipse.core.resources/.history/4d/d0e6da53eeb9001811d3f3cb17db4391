@@ -1,0 +1,15 @@
+package Exercises;
+
+import java.util.Scanner;
+
+public class studentScore {
+
+	public static void main(String[] args) {
+
+		int testScore = scnr.nextInt();
+
+		System.out.println("Please enter your test score.");
+
+	}
+
+}
